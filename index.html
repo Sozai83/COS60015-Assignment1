@@ -29,7 +29,9 @@
             </nav>
             <section id="welcome">
                 <h1>Welcome to the Brave Blossoms Portal!</h1>
-                <p>hello hello!</p>
+                <article>
+                    <p>hello hello!</p>
+                </article>
             </section>
             <section id="teams">
                 <h1>Teams</h1>
@@ -57,28 +59,82 @@
                 </article>
             </section>
         </main>
+        <aside id="games">
+            <nav id="games-vav">
+                <ul>
+                    <li>2023</li>
+                    <li>2022</li>
+                    <li>2021</li>
+                </ul>
+            </nav>
+            <section>
+                <div class="game">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>test</td>
+                                <td>test</td>
+                                <td>test</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                </div>
+            </section>
+        </aside>
+        <aside id="contact">
+            <form>
+                <label for="fname">First Name: </label>
+                <input name="fname" aria-label="fname" type="text" required>
+                <label for="lname">Last Name: </label>
+                <input name="lname" aria-label="lname" type="text" required>
+                <label for="email">Email: </label>
+                <input name="email" aria-label="email" type="email" required>
+                <label for="phone">Phone: </label>
+                <input name="phone" aria-label="phone" type="phone">
+                <label for="category">Category: </label>
+                    <select name="category">
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                        <option type="checkbox" aria-label="checkbox_game">About Game</option>
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                <label for="title">Title: </label>
+                    <input name="title" aria-label="title" type="text">
+                <label for="query">Description: </label>
+                    <textarea name="query" aria-label="query" type="text" required></textarea>
+                <input type="submit" value="Send Message" aria-label="submit">
+            </form>
+        </aside>
         <footer>
             <section id="subscription">
                 <form>
                     <label for="subemail">Email: </label>
-                    <input type="email" name="subemail" placeholder="abc@braveblossoms.com.au">
+                    <input type="email" name="subemail" aria-label="submail" placeholder="abc@braveblossoms.com.au">
                     <label for="area">Areas: </label>
                     <ul class="items" name="areas">
-                        <li><input type="checkbox" />Hokkaido</li>
-                        <li><input type="checkbox" />Tohoku</li>
-                        <li><input type="checkbox" />Kanto</li>
-                        <li><input type="checkbox" />Tokai</li>
-                        <li><input type="checkbox" />Kansai</li>
-                        <li><input type="checkbox" />Shikoku</li>
-                        <li><input type="checkbox" />Kyushu</li>
-                        <li><input type="checkbox" />Okinawa</li>
+                        <li><input type="checkbox" aria-label="checkbox_hokkaido"/>Hokkaido</li>
+                        <li><input type="checkbox" aria-label="checkbox_tohoku"/>Tohoku</li>
+                        <li><input type="checkbox" aria-label="checkbox_kanto"/>Kanto</li>
+                        <li><input type="checkbox" aria-label="checkbox_tokai"/>Tokai</li>
+                        <li><input type="checkbox" aria-label="checkbox_kansai"/>Kansai</li>
+                        <li><input type="checkbox" aria-label="checkbox_shikoku"/>Shikoku</li>
+                        <li><input type="checkbox" aria-label="checkbox_kyushu"/>Kyushu</li>
+                        <li><input type="checkbox" aria-label="checkbox_okinawa"/>Okinawa</li>
                       </ul>
-                    <input type="submit" value="Follow Brave Blossoms!">
+                    <input type="submit" value="Follow Brave Blossoms!" aria-label="submit">
                 </form>
                 <a href="#contact">Contact Brave Blossom</a>
-
             </section>
-
         </footer>
     </body>
 </html>
