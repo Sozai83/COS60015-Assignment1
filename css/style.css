@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#top-nav,
+#second-nav{
+    padding: 20px 40px;
+    margin:0 auto;
+}
+
+#top-nav ul,
+#second-nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#top-nav ul li,
+#second-nav ul{
+    text-align: center;
+}
+
+h1{
+ padding-bottom: 20px;   
+}
+
+#welcome{
+    padding: 40px;
+    background:url(../img/placeholder1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#teams{
+    padding: 40px;
+
+}
+
+section#teams h2{
+    padding-top: 20px;
+}
+
+section#teams figure#fw-team,
+section#teams figure#bk-team,
+section#team-details figure#news,
+section.details{
+    display: flex;
+    padding: 20px 0;
+}
+
+section#teams figure#fw-team figure,
+section#teams figure#bk-team figure{
+    display: flex;
+    flex-direction: column;
+}
+
+section#teams figure img{
+    padding-right: 20px;
+    display: block;
+}
+
+section#teams figure figcaption{
+    padding-right: 20px;
+}
