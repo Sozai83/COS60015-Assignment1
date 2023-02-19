@@ -8,6 +8,11 @@ ul{
     list-style: none;
 }
 
+.wrapper{
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
 #top-nav,
 #second-nav,
 section#learn_rugby nav,
@@ -75,6 +80,10 @@ section#teams figure img{
 
 section#teams figure figcaption{
     padding-right: 20px;
+}
+
+section.bio{
+    width: 500px;
 }
 
 section#learn_rugby article{
