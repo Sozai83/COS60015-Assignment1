@@ -35,27 +35,57 @@ aside#games nav ul{
 }
 
 h1{
- padding-bottom: 20px;   
+ padding-bottom: 20px;
+ font-size: 3em; 
 }
 
-#welcome{
-    padding: 40px;
-    background:url(../img/placeholder1.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+h2{
+    font-size: 2em;
+    padding-bottom: 20px;
 }
 
+h3{
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+section#welcome,
 section#teams,
 section#learn_rugby,
 section.game-wrap,
 aside#contact,
 footer{
     padding: 40px;
+}
 
+section#welcome{
+    margin-top: 20px;
+    height: 50vh;
+    background:url(../img/rugby_cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#welcome h1{
+    color: #fff;
+}
+
+section#welcome article{
+    background: white;
+    padding: 20px;
+    width: 800px;
 }
 
 section#teams h2{
     padding-top: 20px;
+}
+
+section#teams figure.teams-top img{
+    width: 100%;
+}
+
+section#teams .about{
+    padding: 20px 0;
 }
 
 section#teams figure#fw-team,
@@ -64,13 +94,14 @@ section#team-details figure#news,
 section.details,
 section.game_card{
     display: flex;
-    padding: 20px 0;
+    padding-bottom: 20px;
 }
 
 section#teams figure#fw-team figure,
 section#teams figure#bk-team figure{
     display: flex;
     flex-direction: column;
+    width: 200px;
 }
 
 section#teams figure img{
@@ -82,8 +113,32 @@ section#teams figure figcaption{
     padding-right: 20px;
 }
 
-section.bio{
-    width: 500px;
+section#team-details{
+    padding: 20px;
+    background: #fff;
+    border: 1px black solid;
+}
+
+section#team-details section.bio{
+    min-width: 500px;
+    width: 40%;
+}
+
+section#team-details section.bio table{
+    width: 400px;
+}
+
+section#team-details section.bio table,
+section#team-details section.bio th,
+section#team-details section.bio td{
+    border: #000 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+
+section#team-details article{
+    align-self: center;
 }
 
 section#learn_rugby article{
