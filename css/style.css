@@ -4,16 +4,23 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+ul{
+    list-style: none;
+}
+
 #top-nav,
-#second-nav{
+#second-nav,
+section#learn_rugby nav,
+aside#games nav{
     padding: 20px 40px;
     margin:0 auto;
 }
 
 #top-nav ul,
-#second-nav ul{
+#second-nav ul,
+section#learn_rugby nav ul,
+aside#games nav ul{
     display: flex;
-    list-style: none;
     justify-content: space-around;
 }
 
@@ -33,7 +40,11 @@ h1{
     background-size: cover;
 }
 
-section#teams{
+section#teams,
+section#learn_rugby,
+section.game-wrap,
+aside#contact,
+footer{
     padding: 40px;
 
 }
@@ -45,7 +56,8 @@ section#teams h2{
 section#teams figure#fw-team,
 section#teams figure#bk-team,
 section#team-details figure#news,
-section.details{
+section.details,
+section.game_card{
     display: flex;
     padding: 20px 0;
 }
@@ -63,4 +75,148 @@ section#teams figure img{
 
 section#teams figure figcaption{
     padding-right: 20px;
+}
+
+section#learn_rugby article{
+    display:flex;
+    padding: 20px 0;
+}
+
+form#contact-form{
+    margin: 20px auto;
+}
+
+aside#contact li{
+    margin-top: 10px;
+}
+
+input,
+select[name="category"]{
+    padding: 10px;
+    margin: 10px 0;
+}
+
+aside#contact input{
+    width: 35%;
+}
+
+select[name="category"]{
+    width: 100%;
+}
+
+label{
+    padding: 10px 0;
+}
+
+textarea{
+    margin: 10px 0;
+    width: calc(100% - 40px);
+    resize: vertical;
+    padding:15px;
+    border-radius:15px;
+    height:150px;
+}
+
+aside#contact input[type="submit"]{
+    float: right;
+}
+
+section#subscription input{
+    width: 30%;
+    margin-right: 20px;
+}
+
+section#subscription ul{
+    display: inline-block;
+    position: relative;
+    width: 20%;
+}
+
+section#subscription li{
+    position:absolute;
+    padding: 10px 0;
+}
+
+
+section#subscription li.area-label{
+    display: block;
+    padding: 10px 0;
+}
+
+.dropdown {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+}
+
+.dropdown-list {
+    padding: 12px;
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    left: 2px;
+    right: 2px;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .15);
+    transform-origin: 50% 0;
+    transform: scale(1, 0);
+    transition: transform .15s ease-in-out .15s;
+    max-height: 66vh;
+    overflow-y: scroll;
+  }
+  
+  .dropdown-option {
+    display: block;
+    padding: 8px 12px;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+  }
+
+.dropdown-label {
+    display: block;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+      
+.dropdown-label:before {
+    content: '▼';
+    float: right;
+}
+
+.dropdown.on.dropdown-list {
+       transform: scale(1, 1);
+       transition-delay: 0s;
+}
+
+.dropdown.on.dropdown-list .dropdown-option {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.dropdown.on.dropdown-list .dropdown-label:before {
+    content: '▲';
+}
+
+.dropdown [type="checkbox"] {
+    position: relative;
+    top: -1px;
+    margin-right: 4px;
+}
+
+section#footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#footer-nav{
+    display: flex;
+}
+
+#footer-nav div{
+    margin-right: 20px;
 }
