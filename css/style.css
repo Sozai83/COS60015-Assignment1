@@ -14,9 +14,7 @@ ul{
 }
 
 #top-nav,
-#second-nav,
-section#learn_rugby nav,
-aside#games nav{
+#second-nav{
     padding: 20px 40px;
     margin:0 auto;
 }
@@ -80,7 +78,7 @@ section#teams h2{
     padding-top: 20px;
 }
 
-section#teams figure.teams-top img{
+section#teams .teams-top img{
     width: 100%;
 }
 
@@ -88,8 +86,63 @@ section#teams .about{
     padding: 20px 0;
 }
 
-section#teams figure#fw-team,
-section#teams figure#bk-team,
+section#teams #team-members-wrapper{
+    position: relative;
+}
+
+section#teams #team-members-wrapper button.prev,
+section#teams #team-members-wrapper button.next{
+    border: none;
+    cursor: pointer;
+    position:absolute;
+    width: 48px;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.3);
+    top: 0
+}
+
+section#teams #team-members-wrapper button:hover{
+    background-color:  rgba(255, 0, 0, 0.6);
+}
+
+section#teams #team-members-wrapper a{
+    font-size: 36px;
+    position: absolute;
+    top: calc(50% - 36px);
+    left: 15px;
+}
+
+section#teams #team-members-wrapper button.prev{
+    left: 0px;
+}
+
+section#teams #team-members-wrapper button.next{
+    right: 0px;
+}
+
+section#teams #team-members-wrapper .teams-dots{
+    margin: 0 auto;
+    text-align: center;
+}
+
+section#teams #team-members-wrapper button.dot {
+    cursor: pointer;
+    border: none;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+section#teams #team-members-wrapper button.dot:hover,
+section#teams #team-members-wrapper button.active{
+    background-color: rgba(255, 0, 0);
+}
+
+section#teams figure#team-members,
 section#team-details figure#news,
 section.details,
 section.game_card{
@@ -97,8 +150,12 @@ section.game_card{
     padding-bottom: 20px;
 }
 
-section#teams figure#fw-team figure,
-section#teams figure#bk-team figure{
+section#teams figure#team-members{
+    width: 100%;
+    overflow: hidden;
+}
+
+section#teams figure#team-members figure{
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -107,6 +164,8 @@ section#teams figure#bk-team figure{
 section#teams figure img{
     padding-right: 20px;
     display: block;
+    margin: 0 auto;
+    width: 120px;
 }
 
 section#teams figure figcaption{
@@ -125,6 +184,7 @@ section#team-details section.bio{
 }
 
 section#team-details section.bio table{
+    margin: 10px auto;
     width: 400px;
 }
 
@@ -141,9 +201,101 @@ section#team-details article{
     align-self: center;
 }
 
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hidden{
+    display:none;
+}
+
+section#team-details{
+    margin: 25% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 80%;
+    position: relative;
+    transition: all 5s ease;
+}
+
+section#team-details .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+section#team-details .close:hover {
+    color: #06D85F;
+}
+
+section#learn_rugby nav,
+aside#games nav{
+    text-align: center;
+}
+
+section#learn_rugby nav ul li,
+aside#games nav ul li{
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 20px 0;
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+section#learn_rugby nav ul li:hover,
+section#learn_rugby nav ul li.active,
+aside#games nav ul li:hover,
+aside#games nav ul li.active{
+    background-color: rgba(255, 0, 0);
+    color: #fff;
+}
+
+section#learn_rugby .rule-card{
+    margin-top: 40px;
+}
+
 section#learn_rugby article{
     display:flex;
     padding: 20px 0;
+}
+
+section#learn_rugby .rule-card article p{
+    align-self: center;
+}
+
+section#learn_rugby .rule-card article figure{
+    width: 80%;
+}
+
+section#learn_rugby .rule-card article figure img{
+    width: 100%;
+}
+
+section.game_card{
+    padding: 20px 0;
+    border-bottom: 5px rgba(255, 0, 0) solid;
+}
+
+section.game_card table,
+section.game_card .highlight,
+section.game_card .buy-ticket{
+    width: 50%;
+}
+
+section.game_card .highlight img,
+section.game_card .buy-ticket iframe{
+    width: 100%;
+    max-width: 500px;
 }
 
 form#contact-form{
