@@ -397,7 +397,6 @@ section#subscription li.area-label{
     cursor: pointer;
 }
 
-      
 .dropdown-label:before {
     content: '▼';
     float: right;
