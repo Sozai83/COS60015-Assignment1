@@ -374,12 +374,52 @@ section.game_card button{
     width: 50%;
 }
 
-form#contact-form{
-    margin: 20px auto;
+aside#contact header{
+    height: 30vh;
+    background:url(../img/contact.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-aside#contact li{
-    margin-top: 10px;
+aside#contact header h2{
+    color: #fff;
+    padding: 40px 100px;
+    font-size: 64px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+}
+
+aside#contact section#contact_address .contact_details{
+    height: 10vh;
+    margin: 0 auto;
+    background-color: aquamarine;
+    text-align: center;
+    padding-top: 20px;
+}
+
+aside#contact section#contact_address .contact_point{
+    margin: 0 auto;
+    background-color: #fff;
+    border-left: 570px solid transparent;
+    border-right: 570px solid transparent;
+    border-top: 100px solid aquamarine;
+}
+
+form#contact-form{
+    margin: 40px auto;
+}
+
+aside#contact form#contact-form label{
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+
+aside#contact form#contact-form label.left{
+    text-align: left;
 }
 
 input,
@@ -393,7 +433,7 @@ aside#contact input{
 }
 
 select[name="category"]{
-    width: 100%;
+    width: calc(100% - 120px);
 }
 
 label{

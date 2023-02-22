@@ -398,42 +398,42 @@
         </aside>
         <aside id="contact">
             <div class="wrapper">
-                <h2>Contact us</h2>
-            <form id="contact-form">
-                <ul>
-                    <li>
-                        <label for="fname">First Name: </label>
-                        <input name="fname" aria-label="fname" type="text" required>
-                        <label for="lname">Last Name: </label>
-                        <input name="lname" aria-label="lname" type="text" required>
-                    </li>
-                    <li>
-                        <label for="email">Email: </label>
-                        <input name="email" aria-label="email" type="email" required>
-                        <label for="phone">Phone: </label>
-                        <input name="phone" aria-label="phone" type="phone">
-                    </li>
-                    <li>
-                        <label for="category">Category: </label>
-                        <select name="category">
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                            <option type="checkbox" aria-label="checkbox_game">About Game</option>
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                        </select>
-                    </li>
-                    <li>
-                        <label for="query">Description: </label>
-                        <textarea name="query" aria-label="query" type="text" required></textarea>
-                    </li>
-                    <li>
-                        <label for="file">Select a file:</label>
-                        <input type="file" id="file" name="file">
-                        <input type="submit" value="Send Message" aria-label="submit">
-                    </li>
-                </ul>
-            </form>
+                <header>
+                    <h2>Contact us</h2>
+                </header>
+                <section id="contact_address">
+                    <div class="contact_details">
+                        <h3>Please use the form below to contact us!</h3>
+                        <h4>We would love to hear from you :)</h4>
+                        <address><b>Address: </b>Brunton Ave, Richmond VIC 3002</address>
+                        <email><b>Email: </b><a href="">email@braveblossoms.com</a></email>
+                        <b>Phone: </b><a href="" class="phone">(03) 9657 8888</a>
+                    </div>
+                    <div class="contact_point"></div>
+                </section>
+                <form id="contact-form">
+                    <label for="fname">First Name: </label>
+                    <input name="fname" aria-label="fname" type="text" required>
+                    <label for="lname">Last Name: </label>
+                    <input name="lname" aria-label="lname" type="text" required>
+                    <label for="email">Email: </label>
+                    <input name="email" aria-label="email" type="email" required>
+                    <label for="phone">Phone: </label>
+                    <input name="phone" aria-label="phone" type="phone">
+                    <label for="category" class="left">Category: </label>
+                    <select name="category">
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                        <option type="checkbox" aria-label="checkbox_game">About Game</option>
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                    </select>
+                    <label for="query" class="left">Description: </label>
+                    <textarea name="query" aria-label="query" type="text" required></textarea>
+                    <label for="file" class="left">Select a file:</label>
+                    <input type="file" id="file" name="file">
+                    <input type="submit" value="Send Message" aria-label="submit">
+                </form>
             </div> 
         </aside>
         <footer>
