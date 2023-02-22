@@ -14,14 +14,14 @@
             <div class="wrapper">
                 <nav id="top-nav">
                     <ul>
-                        <li><a href="">Games</a></li>
+                        <li><a href="">Matches</a></li>
                         <li><a href="">Home</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main>
+        <main class="hidden">
             <div class="wrapper">
                 <nav id="second-nav">
                     <ul>
@@ -203,13 +203,13 @@
                 <section id="learn_rugby">
                     <nav>
                         <ul>
-                            <li id="begginer" class="active">Begginer</li>
+                            <li id="beginner" class="active">Beginner</li>
                             <li id="advance">Advance</li>
                             <li id="recent">Recent</li>
                         </ul>
                     </nav>
                     <section id="begineer-rules" class="rule-card">
-                        <h2>Rules for begginers</h2>
+                        <h2>Rules for beginners</h2>
                         <article>
                             <p>
                                 Lorem ipsum dolor sit amet. Et quia illum 33 consequatur velit ab voluptas pariatur qui odio voluptatibus ea minima blanditiis.<br>
@@ -250,7 +250,7 @@
                 </section>
             </main>
             </div>
-        <aside id="games">
+        <aside id="games" class="hidden">
             <div class="wrapper">
                 <nav>
                     <ul>
@@ -262,19 +262,35 @@
                 <section id="games_2023" class="game-wrap">
                     <section class="game_card">
                         <table>
-                            <tr>
+                            <tr class="game_title">
+                                <th colspan="2">2023 Lipovitan-D Rugby Championship</th>
+                            </tr>
+                            <tr class="game_teams">
                                 <th>Game: </th>
-                                <td>YY vs XX</td>
+                                <td>
+                                    <img src="/img/france.png" alt="France" height="100">
+                                    <div class="teams">France vs Japan</div>
+                                    <img src="/img/jpn.png" alt="Japan" height="100">
+                                </td>
                             </tr>
-                            <tr>
+                            <tr class="result">
+                                <th>Result: </th>
+                                <td>35 - 17</td>
+                            </tr>
+                            <tr class="game_schedule">
                                 <th>Date: </th>
-                                <td>23 Feb 2023</td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td class="game_date">23 Feb 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="game_time">4:30PM</td>
+                                        </tr>
+                                    </table>
+                                </td>
                             </tr>
-                            <tr>
-                                <th>Time: </th>
-                                <td>4:30PM</td>
-                            </tr>
-                            <tr>
+                            <tr class="game_place">
                                 <th>Place: </th>
                                 <td>Melbourne Australia</td>
                             </tr>
@@ -285,60 +301,97 @@
                                 <img src="./img/placeholder1.png" alt="bk8">
                             </figure>
                         </div>
-                        <!-- <div>
-                            <a href="">Buy Ticket</a>
-                            <address>xxxxxx</address>
-                            <div class="mapouter">
-                                <div class="gmap_canvas">
-                                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=mcg%20melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                    <a href="https://123movies-i.net">miss bala 123movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">embed map google</a>
-                                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
-                                </div>
-                            </div>
-                        </div> -->
                     </section>
                     <section class="game_card">
                         <table>
-                            <tr>
+                            <tr class="game_title">
+                                <th colspan="2">2023 Lipovitan-D Rugby Championship</th>
+                            </tr>
+                            <tr class="game_teams">
                                 <th>Game: </th>
-                                <td>YY vs XX</td>
+                                <td>
+                                    <img src="/img/france.png" alt="France" height="100">
+                                    <div class="teams">France vs Japan</div>
+                                    <img src="/img/jpn.png" alt="Japan" height="100">
+                                </td>
                             </tr>
-                            <tr>
+                            <tr class="result">
+                                <th>Result: </th>
+                                <td>35 - 17</td>
+                            </tr>
+                            <tr class="game_schedule">
                                 <th>Date: </th>
-                                <td>23 Feb 2023</td>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td class="game_date">23 Feb 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="game_time">4:30PM</td>
+                                        </tr>
+                                    </table>
+                                </td>
                             </tr>
-                            <tr>
-                                <th>Time: </th>
-                                <td>4:30PM</td>
-                            </tr>
-                            <tr>
+                            <tr class="game_place">
                                 <th>Place: </th>
                                 <td>Melbourne Australia</td>
                             </tr>
-                            <tr>
-                                <td colspan="2"><h3><a href="">Buy Ticket</a></h3></td>
-                            </tr>
                         </table>
-                        <!-- <div>
-                            <h2>Highlight</h2>
+                        <div class="highlight">
+                            <h3>Highlight</h3>
                             <figure>
                                 <img src="./img/placeholder1.png" alt="bk8">
                             </figure>
-                        </div> -->
-                        <div class="buy-ticket">
+                        </div>
+                    </section>
+                    <section class="game_card">
+                        <table>
+                            <tr class="game_title">
+                                <th colspan="2">2023 Lipovitan-D Rugby Championship</th>
+                            </tr>
+                            <tr class="game_teams">
+                                <th>Game: </th>
+                                <td>
+                                    <img src="/img/france.png" alt="France" height="100">
+                                    <div class="teams">France vs Japan</div>
+                                    <img src="/img/jpn.png" alt="Japan" height="100">
+                                </td>
+                            </tr>
+                            <tr class="result">
+                                <th>Result: </th>
+                                <td>35 - 17</td>
+                            </tr>
+                            <tr class="game_schedule">
+                                <th>Date: </th>
+                                <td>
+                                    <table>
+                                        <tr>
+                                            <td class="game_date">23 Feb 2023</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="game_time">4:30PM</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="game_place">
+                                <th>Place: </th>
+                                <td>Melbourne Australia</td>
+                            </tr>
+                        </table>
+                        <div class="map">
                             <h4>Map:</h4>
-                            <div class="mapouter">
+                            <div>
                                 <div class="gmap_canvas">
-                                    <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=mcg%20melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                    <iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=mcg%20melbourne&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                                     <a href="https://123movies-i.net">miss bala 123movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">embed map google</a>
-                                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+                                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:400px;}</style>
                                 </div>
                             </div>
-                            <h4>Address: </h4>
-                            <address>Brunton Ave, Richmond VIC 3002</address>
-                            <h4>Phone: </h4>
-                            <a href="" class="phone">(03) 9657 8888</a>
+                            <address><b>Address: </b>Brunton Ave, Richmond VIC 3002</address>
+                            <b>Phone: </b><a href="" class="phone">(03) 9657 8888</a>
                         </div>
+                        <button>Buy ticket</button>
                     </section>
                 </section>
             </div>

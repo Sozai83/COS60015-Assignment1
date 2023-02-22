@@ -8,6 +8,14 @@ ul{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+}
+
+address{
+    font-style: normal;
+}
+
 .wrapper{
     max-width: 1150px;
     margin: 0 auto;
@@ -15,8 +23,15 @@ ul{
 
 #top-nav,
 #second-nav{
+    margin:0 auto;  
+}
+
+#top-nav{
+    padding: 40px;
+}
+
+#second-nav{
     padding: 20px 40px;
-    margin:0 auto;
 }
 
 #top-nav ul,
@@ -282,20 +297,81 @@ section#learn_rugby .rule-card article figure img{
 }
 
 section.game_card{
-    padding: 20px 0;
+    padding: 40px 0;
     border-bottom: 5px rgba(255, 0, 0) solid;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 section.game_card table,
 section.game_card .highlight,
-section.game_card .buy-ticket{
+section.game_card .map{
     width: 50%;
 }
 
+section.game_card .highlight,
+section.game_card .map{
+    margin: 0 auto;
+    max-width: 400px;
+}
+
 section.game_card .highlight img,
-section.game_card .buy-ticket iframe{
+section.game_card .map iframe{
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
+}
+
+section.game_card .map address{
+    padding-top: 10px;
+}
+
+section.game_card table{
+    border-collapse: collapse;
+    text-align: center;
+}
+
+section.game_card table,
+section.game_card .map h4{
+    font-size: 20px;
+}
+
+section.game_card table tr.game_teams{
+    height: 100px;
+}
+
+section.game_card table tr.game_teams td{
+    display: flex;
+    justify-content: center;
+}
+
+section.game_card table tr.game_teams .teams{
+    padding: 0 10px;
+    align-self: center;
+}
+
+section.game_card table .game_title th{
+    padding-bottom: 10px;
+}
+
+section.game_card table tr.game_teams .teams,
+section.game_card .game_schedule td.game_date,
+section.game_card .game_place td{
+    font-size: 24px;
+}
+
+section.game_card table .result td{
+    height: 42px;
+    font-size: 42px;
+}
+
+section.game_card .game_schedule table{
+    width: 100%;
+}
+
+section.game_card button{
+    margin-top: 40px;
+    padding:10px 20px;
+    width: 50%;
 }
 
 form#contact-form{
