@@ -14,20 +14,20 @@
             <div class="wrapper">
                 <nav id="top-nav">
                     <ul>
-                        <li><a href="">Matches</a></li>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#matches" data-nav="matches">MATCHES</a></li>
+                        <li><a href="#home" data-nav="home">HOME</a></li>
+                        <li><a href="#contact" data-nav="contact">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <main class="hidden">
+        <main id="home" class="">
             <div class="wrapper">
                 <nav id="second-nav">
                     <ul>
-                        <li><a href="">Welcome</a></li>
-                        <li><a href="">About Team</a></li>
-                        <li><a href="">Learn Rugby</a></li>
+                        <li><a href="#welcome">WELCOME</a></li>
+                        <li><a href="#teams">ABOUT TEAM</a></li>
+                        <li><a href="#learn_rugby">LEARN RUGBY</a></li>
                     </ul>
                 </nav>
                 <section id="welcome">
@@ -250,7 +250,7 @@
                 </section>
             </main>
             </div>
-        <aside id="games" class="hidden">
+        <aside id="matches" class="hidden">
             <div class="wrapper">
                 <nav>
                     <ul>
@@ -396,7 +396,7 @@
                 </section>
             </div>
         </aside>
-        <aside id="contact">
+        <aside id="contact" class="hidden">
             <div class="wrapper">
                 <header>
                     <h2>Contact us</h2>
@@ -453,9 +453,10 @@
                         </select>
                         <input type="submit" value="Follow Brave Blossoms!" aria-label="submit">
                     </form>
-                    <a href="#contact">Contact Brave Blossom</a>
                 </section>
-                <section id="footer">
+            </div>
+            <section id="footer">
+                <div class="wrapper">
                     <nav id="footer-nav">
                         <div>
                             Home
@@ -479,8 +480,9 @@
                         <address>xxx xxxx xxxxx Victoria 3000</address>
                         <email>xxx.xxx@xxxx.com</email>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </footer>
+        <script src="./js/index.js"></script>
     </body>
 </html>

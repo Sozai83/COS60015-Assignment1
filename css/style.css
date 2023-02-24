@@ -17,7 +17,7 @@ address{
 }
 
 .wrapper{
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -37,14 +37,15 @@ address{
 #top-nav ul,
 #second-nav ul,
 section#learn_rugby nav ul,
-aside#games nav ul{
+aside#matches nav ul{
     display: flex;
     justify-content: space-around;
 }
 
 #top-nav ul li,
-#second-nav ul{
+#second-nav ul li{
     text-align: center;
+    width: 150px;
 }
 
 h1{
@@ -162,6 +163,7 @@ section#team-details figure#news,
 section.details,
 section.game_card{
     display: flex;
+    margin: 0 10px;
     padding-bottom: 20px;
 }
 
@@ -255,12 +257,12 @@ section#team-details .close:hover {
 }
 
 section#learn_rugby nav,
-aside#games nav{
+aside#matches nav{
     text-align: center;
 }
 
 section#learn_rugby nav ul li,
-aside#games nav ul li{
+aside#matches nav ul li{
     cursor: pointer;
     flex-grow: 1;
     padding: 20px 0;
@@ -269,8 +271,8 @@ aside#games nav ul li{
 
 section#learn_rugby nav ul li:hover,
 section#learn_rugby nav ul li.active,
-aside#games nav ul li:hover,
-aside#games nav ul li.active{
+aside#matches nav ul li:hover,
+aside#matches nav ul li.active{
     background-color: rgba(255, 0, 0);
     color: #fff;
 }
@@ -402,8 +404,8 @@ aside#contact section#contact_address .contact_details{
 aside#contact section#contact_address .contact_point{
     margin: 0 auto;
     background-color: #fff;
-    border-left: 570px solid transparent;
-    border-right: 570px solid transparent;
+    border-left: 590px solid transparent;
+    border-right: 590px solid transparent;
     border-top: 100px solid aquamarine;
 }
 
@@ -423,7 +425,7 @@ aside#contact form#contact-form label.left{
 }
 
 input,
-select[name="category"]{
+select{
     padding: 10px;
     margin: 10px 0;
 }
@@ -433,7 +435,7 @@ aside#contact input{
 }
 
 select[name="category"]{
-    width: calc(100% - 120px);
+    width: calc(100% - 180px);
 }
 
 label{
@@ -442,106 +444,36 @@ label{
 
 textarea{
     margin: 10px 0;
-    width: calc(100% - 40px);
+    width: calc(100% - 100px);
     resize: vertical;
     padding:15px;
     border-radius:15px;
     height:150px;
 }
 
-aside#contact input[type="submit"]{
+input[type="submit"]{
     float: right;
 }
 
-section#subscription input{
-    width: 30%;
+section#subscription{
+    padding: 0 40px;
+    margin-bottom: 20px;
+}
+
+footer section#subscription input{
+    width: 20%;
     margin-right: 20px;
 }
 
-section#subscription ul{
-    display: inline-block;
-    position: relative;
-    width: 20%;
-}
-
-section#subscription li{
-    position:absolute;
-    padding: 10px 0;
-}
-
-
-section#subscription li.area-label{
-    display: block;
-    padding: 10px 0;
-}
-
-.dropdown {
-    position: relative;
-    font-size: 14px;
-    color: #333;
-}
-
-.dropdown-list {
-    padding: 12px;
-    background: #fff;
-    position: absolute;
-    top: 30px;
-    left: 2px;
-    right: 2px;
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .15);
-    transform-origin: 50% 0;
-    transform: scale(1, 0);
-    transition: transform .15s ease-in-out .15s;
-    max-height: 66vh;
-    overflow-y: scroll;
-  }
-  
-  .dropdown-option {
-    display: block;
-    padding: 8px 12px;
-    opacity: 0;
-    transition: opacity .15s ease-in-out;
-  }
-
-.dropdown-label {
-    display: block;
-    height: 30px;
-    background: #fff;
-    border: 1px solid #ccc;
-    padding: 6px 12px;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.dropdown-label:before {
-    content: '▼';
-    float: right;
-}
-
-.dropdown.on.dropdown-list {
-       transform: scale(1, 1);
-       transition-delay: 0s;
-}
-
-.dropdown.on.dropdown-list .dropdown-option {
-    opacity: 1;
-    transition-delay: .2s;
-}
-
-.dropdown.on.dropdown-list .dropdown-label:before {
-    content: '▲';
-}
-
-.dropdown [type="checkbox"] {
-    position: relative;
-    top: -1px;
-    margin-right: 4px;
-}
-
-section#footer{
+section#footer > div{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 20px auto;
+}
+
+footer section#footer{
+    padding: 40px 0;
+    background-color: #06D85F;
 }
 
 #footer-nav{
