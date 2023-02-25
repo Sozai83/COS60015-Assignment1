@@ -111,7 +111,7 @@ section#teams #team-members-wrapper button.next{
     border: none;
     cursor: pointer;
     position:absolute;
-    width: 48px;
+    width: 50px;
     height: 100%;
     background-color: rgba(255, 0, 0, 0.3);
     top: 0
@@ -130,10 +130,12 @@ section#teams #team-members-wrapper a{
 
 section#teams #team-members-wrapper button.prev{
     left: 0px;
+    z-index: 100;
 }
 
 section#teams #team-members-wrapper button.next{
     right: 0px;
+    z-index: 100;
 }
 
 section#teams #team-members-wrapper .teams-dots{
@@ -158,31 +160,40 @@ section#teams #team-members-wrapper button.active{
     background-color: rgba(255, 0, 0);
 }
 
-section#teams figure#team-members,
+section#teams div#team-members,
 section#team-details figure#news,
 section.details,
 section.game_card{
     display: flex;
-    margin: 0 10px;
     padding-bottom: 20px;
 }
 
-section#teams figure#team-members{
-    width: 100%;
+section#teams div#team-members-container{
+    width: 1120px;
     overflow: hidden;
 }
 
-section#teams figure#team-members figure{
+section#teams div#team-members{
+    width: 3400px;
+    opacity: 1;
+}
+
+section#teams div#team-members::-webkit-scrollbar{
+    width: 0;
+    display: none;
+}
+
+section#teams div#team-members figure{
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 300px;
 }
 
 section#teams figure img{
     padding-right: 20px;
     display: block;
     margin: 0 auto;
-    width: 120px;
+    width: 170px;
 }
 
 section#teams figure figcaption{
