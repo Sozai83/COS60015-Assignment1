@@ -4,7 +4,8 @@ const firstNav = document.getElementById("top-nav");
 const matches = document.getElementById('matches');
 const home =  document.getElementById('home');
 const contact = document.getElementById('contact');
-const firstNavList = [matches, home, contact];
+const NavList = [matches, home, contact];
+const firstNavLists = [...document.querySelectorAll(".top-nav-list")];
 
 const ruleNav = document.getElementById("rule-nav");
 const begginer =  document.getElementById("begineer-rules");
@@ -28,6 +29,10 @@ const teamsDotsContainer = document.getElementsByClassName("teams-dots")[0];
 const teamDots = [...document.querySelectorAll(".dot")];
 const memberCardsContainers = [...document.querySelectorAll(".team-member")];
 
+const firstName = document.querySelector('[aria-label="fname"]');
+const lastName = document.querySelector('[aria-label="lname"]');
+const email = document.querySelector('[aria-label="contact-email"]');
+
 let teamActive = 0;
 
 const hideElement = function(list){
@@ -48,6 +53,22 @@ const removeActive = function(list){
 
 const addActive = function(el){
     el.classList.add("active");
+}
+
+const emailValidation = function(){
+    let validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    return validation
+}
+
+const phoneValidation = function(){
+    let validation = true;
+    return validation
+}
+
+const requiredValidation = function(){
+    let emptyRequiedFields = [];
+
+    reutrn
 }
 
 const getAxisX = function(){
@@ -135,10 +156,12 @@ const generateTeamHTML = function(member){
 firstNav.addEventListener('click', function(e){
     e.preventDefault();
     if (e.target.tagName == "A"){
-        hideElement(firstNavList);
+        hideElement(NavList);
         let selected = e.target.dataset.nav;
         let selectedEl = document.getElementById(selected);
         showElement(selectedEl);
+        removeActive(firstNavLists);
+        addActive(e.target.parentNode);
     }
 });
 

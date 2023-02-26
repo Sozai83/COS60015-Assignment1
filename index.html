@@ -14,9 +14,9 @@
             <div class="wrapper">
                 <nav id="top-nav">
                     <ul>
-                        <li><a href="#matches" data-nav="matches">MATCHES</a></li>
-                        <li><a href="#home" data-nav="home">HOME</a></li>
-                        <li><a href="#contact" data-nav="contact">CONTACT</a></li>
+                        <li class="top-nav-list active"><a href="#matches" data-nav="matches">MATCHES</a></li>
+                        <li class="top-nav-list"><a href="#home" data-nav="home">HOME</a></li>
+                        <li class="top-nav-list"><a href="#contact" data-nav="contact">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -25,9 +25,9 @@
             <div class="wrapper">
                 <nav id="second-nav">
                     <ul>
-                        <li><a href="#welcome">WELCOME</a></li>
-                        <li><a href="#teams">ABOUT TEAM</a></li>
-                        <li><a href="#learn_rugby">LEARN RUGBY</a></li>
+                        <li class="second-nav-list"><a href="#welcome">WELCOME</a></li>
+                        <li class="second-nav-list"><a href="#teams">ABOUT TEAM</a></li>
+                        <li class="second-nav-list"><a href="#learn_rugby">LEARN RUGBY</a></li>
                     </ul>
                 </nav>
                 <section id="welcome">
@@ -746,6 +746,13 @@
                     <div class="contact_point"></div>
                 </section>
                 <form id="contact-form">
+                    <div class="alert">
+                        <ul>
+                            <li>Please fill First Name, Last Name, Email address, category, Description</li>
+                            <li>Please enter valid email adress.</li>
+                            <li>Please enter valid phone number.</li>
+                        </ul>
+                    </div>
                     <label for="fname">First Name: </label>
                     <input name="fname" aria-label="fname" type="text" required>
                     <label for="lname">Last Name: </label>
@@ -755,7 +762,7 @@
                     <label for="phone">Phone: </label>
                     <input name="phone" aria-label="phone" type="phone">
                     <label for="category" class="left">Category: </label>
-                    <select name="category">
+                    <select name="category" required>
                         <option type="checkbox" aria-label="checkbox_team">About Team</option>
                         <option type="checkbox" aria-label="checkbox_game">About Game</option>
                         <option type="checkbox" aria-label="checkbox_team">About Team</option>
@@ -779,11 +786,15 @@
                         <input type="email" name="subemail" aria-label="submail" placeholder="abc@braveblossoms.com.au">
                         <label for="area" class="dropdown">Areas: </label>
                         <select name="area">
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                            <option type="checkbox" aria-label="checkbox_game">About Game</option>
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                            <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                            <option type="checkbox" aria-label="any">Any</option>
+                            <option type="checkbox" aria-label="hokkaido">Hokkaido</option>
+                            <option type="checkbox" aria-label="tohoku">Tohoku</option>
+                            <option type="checkbox" aria-label="kanto">Kanto</option>
+                            <option type="checkbox" aria-label="tokai">Tokai</option>
+                            <option type="checkbox" aria-label="kansai">Kansai</option>
+                            <option type="checkbox" aria-label="shikoku">Shikoku</option>
+                            <option type="checkbox" aria-label="kyushu">Kyushu</option>
+                            <option type="checkbox" aria-label="Okinawa">Okinawa</option>
                         </select>
                         <input type="submit" value="Follow Brave Blossoms!" aria-label="submit">
                     </form>

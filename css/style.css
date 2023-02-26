@@ -21,17 +21,12 @@ address{
     margin: 0 auto;
 }
 
-#top-nav,
-#second-nav{
+#top-nav{
     margin:0 auto;  
 }
 
 #top-nav{
-    padding: 40px;
-}
-
-#second-nav{
-    padding: 20px 40px;
+    padding: 40px 0px 20px 0px;
 }
 
 #top-nav ul,
@@ -44,8 +39,27 @@ aside#matches nav ul{
 
 #top-nav ul li,
 #second-nav ul li{
+    padding-bottom: 10px;
     text-align: center;
     width: 150px;
+    position: relative;
+}
+
+#top-nav ul li:after{
+    position: absolute;
+    left: 50%;
+    content: '';
+    height: 3px;
+    background: #f00;
+    transition: all 0.5s linear;
+    width: 0;
+    bottom: -3px;
+}
+
+#top-nav ul li:hover:after,
+#top-nav ul li.active:after{
+    width: 100%;
+    left: 0px;
 }
 
 h1{
@@ -67,8 +81,7 @@ section#welcome,
 section#teams,
 section#learn_rugby,
 section.match-wrap,
-aside#contact,
-footer{
+aside#contact{
     padding: 40px;
 }
 
@@ -290,6 +303,7 @@ aside#matches nav{
     text-align: center;
 }
 
+#second-nav ul li,
 section#learn_rugby nav ul li,
 aside#matches nav ul li{
     cursor: pointer;
@@ -301,7 +315,8 @@ aside#matches nav ul li{
 section#learn_rugby nav ul li:hover,
 section#learn_rugby nav ul li.active,
 aside#matches nav ul li:hover,
-aside#matches nav ul li.active{
+aside#matches nav ul li.active,
+#second-nav ul li:hover{
     background-color: rgba(255, 0, 0);
     color: #fff;
 }
@@ -458,6 +473,18 @@ aside#contact form#contact-form label.left{
     text-align: left;
 }
 
+aside#contact form#contact-form .alert{
+    margin: 20px auto;
+    width: 800px;
+    background-color: lightgray;
+    color: red;
+    padding: 20px;
+}
+
+aside#contact form#contact-form .alert li{
+    padding-bottom: 10px;
+}
+
 input,
 select{
     padding: 10px;
@@ -490,13 +517,17 @@ input[type="submit"]{
 }
 
 section#subscription{
-    padding: 0 40px;
+    padding: 20px 40px;
     margin-bottom: 20px;
 }
 
 footer section#subscription input{
-    width: 20%;
+    width: 30%;
     margin-right: 20px;
+}
+
+footer section#subscription select{
+    width: 20%;
 }
 
 section#footer > div{
@@ -506,7 +537,7 @@ section#footer > div{
 }
 
 footer section#footer{
-    padding: 40px 0;
+    padding: 40px;
     background-color: #06D85F;
 }
 

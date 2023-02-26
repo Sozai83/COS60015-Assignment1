@@ -8,3 +8,6 @@ Photo by <a href="https://unsplash.com/@designer4u?utm_source=unsplash&utm_mediu
 
   Photo by <a href="https://unsplash.com/@christinnoelle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christin Noelle</a> on <a href="https://unsplash.com/photos/f4cqfNQOBkA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   https://sharkcoder.com/visual/shapes
+
+Menu border
+  https://stackoverflow.com/questions/35066584/how-to-animate-border-transition-expand-with-css
