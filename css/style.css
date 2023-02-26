@@ -66,7 +66,7 @@ h3{
 section#welcome,
 section#teams,
 section#learn_rugby,
-section.game-wrap,
+section.match-wrap,
 aside#contact,
 footer{
     padding: 40px;
@@ -163,13 +163,14 @@ section#teams #team-members-wrapper button.active{
 section#teams div#team-members,
 section#team-details figure#news,
 section.details,
-section.game_card{
+section.match_card{
     display: flex;
     padding-bottom: 20px;
 }
 
 section#teams div#team-members-container{
     width: 1120px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -189,15 +190,18 @@ section#teams div#team-members figure{
     width: 300px;
 }
 
-section#teams figure img{
+section#teams div#team-members figure img,
+section#team-details figure img{
     padding-right: 20px;
     display: block;
     margin: 0 auto;
     width: 170px;
+    height: 180px;
 }
 
 section#teams figure figcaption{
     padding-right: 20px;
+    text-align: center;
 }
 
 section#team-details{
@@ -229,6 +233,19 @@ section#team-details article{
     align-self: center;
 }
 
+section#team-details article .sms{
+    margin: 20px auto;
+}
+
+section#team-details figure#news figure{
+    width: 30%;
+}
+
+section#team-details figure#news img{
+    height: 200px;
+    width: calc(100% - 40px);
+}
+
 .overlay{
     position: fixed;
     top: 0;
@@ -243,11 +260,12 @@ section#team-details article{
 }
 
 section#team-details{
-    margin: 25% auto;
+    margin: 10vh auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
     width: 80%;
+    max-width: 1120px;
     position: relative;
     transition: all 5s ease;
 }
@@ -309,79 +327,84 @@ section#learn_rugby .rule-card article figure img{
     width: 100%;
 }
 
-section.game_card{
+section.match_card{
     padding: 40px 0;
     border-bottom: 5px rgba(255, 0, 0) solid;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-section.game_card table,
-section.game_card .highlight,
-section.game_card .map{
+section.match_card table,
+section.match_card .highlight,
+section.match_card .map{
     width: 50%;
 }
 
-section.game_card .highlight,
-section.game_card .map{
+section.match_card .highlight,
+section.match_card .map{
     margin: 0 auto;
     max-width: 400px;
 }
 
-section.game_card .highlight img,
-section.game_card .map iframe{
+section.match_card .highlight img,
+section.match_card .map iframe{
     width: 100%;
     max-width: 400px;
 }
 
-section.game_card .map address{
+section.match_card .map address{
     padding-top: 10px;
 }
 
-section.game_card table{
+section.match_card table{
     border-collapse: collapse;
     text-align: center;
 }
 
-section.game_card table,
-section.game_card .map h4{
+section.match_card table,
+section.match_card .map h4{
     font-size: 20px;
 }
 
-section.game_card table tr.game_teams{
+section.match_card table tr.match_teams{
     height: 100px;
 }
 
-section.game_card table tr.game_teams td{
+section.match_card table tr.match_teams td{
     display: flex;
     justify-content: center;
 }
 
-section.game_card table tr.game_teams .teams{
+section.match_card table tr.match_teams .teams{
     padding: 0 10px;
     align-self: center;
 }
 
-section.game_card table .game_title th{
+section.match_card table tr.match_teams img.team{
+    width: 100px;
+    height: 100px;
+}
+
+section.match_card table .match_title th{
     padding-bottom: 10px;
 }
 
-section.game_card table tr.game_teams .teams,
-section.game_card .game_schedule td.game_date,
-section.game_card .game_place td{
+section.match_card table tr.match_teams .teams,
+section.match_card .match_schedule td.match_date,
+section.match_card .match_place td{
     font-size: 24px;
 }
 
-section.game_card table .result td{
+section.match_card table .result td{
     height: 42px;
     font-size: 42px;
 }
 
-section.game_card .game_schedule table{
+section.match_card .match_schedule table{
     width: 100%;
 }
 
-section.game_card button{
+section.match_card button{
     margin-top: 40px;
     padding:10px 20px;
     width: 50%;
