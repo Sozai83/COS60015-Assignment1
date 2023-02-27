@@ -29,9 +29,11 @@ const teamsDotsContainer = document.getElementsByClassName("teams-dots")[0];
 const teamDots = [...document.querySelectorAll(".dot")];
 const memberCardsContainers = [...document.querySelectorAll(".team-member")];
 
-const firstName = document.querySelector('[aria-label="fname"]');
-const lastName = document.querySelector('[aria-label="lname"]');
-const email = document.querySelector('[aria-label="contact-email"]');
+const firstName = document.getElementById("fname");
+const lastName = document.getElementById("lname");
+const email = document.getElementById("contact-email");
+const query = document.getElementById("query");
+
 
 let teamActive = 0;
 

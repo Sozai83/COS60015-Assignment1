@@ -14,8 +14,8 @@
             <div class="wrapper">
                 <nav id="top-nav">
                     <ul>
-                        <li class="top-nav-list active"><a href="#matches" data-nav="matches">MATCHES</a></li>
-                        <li class="top-nav-list"><a href="#home" data-nav="home">HOME</a></li>
+                        <li class="top-nav-list"><a href="#matches" data-nav="matches">MATCHES</a></li>
+                        <li class="top-nav-list active"><a href="#home" data-nav="home">HOME</a></li>
                         <li class="top-nav-list"><a href="#contact" data-nav="contact">CONTACT</a></li>
                     </ul>
                 </nav>
@@ -25,7 +25,7 @@
             <div class="wrapper">
                 <nav id="second-nav">
                     <ul>
-                        <li class="second-nav-list"><a href="#welcome">WELCOME</a></li>
+                        <li class="second-nav-list active"><a href="#welcome">WELCOME</a></li>
                         <li class="second-nav-list"><a href="#teams">ABOUT TEAM</a></li>
                         <li class="second-nav-list"><a href="#learn_rugby">LEARN RUGBY</a></li>
                     </ul>
@@ -746,21 +746,21 @@
                     <div class="contact_point"></div>
                 </section>
                 <form id="contact-form">
-                    <div class="alert">
+                    <div class="alert hidden">
                         <ul>
-                            <li>Please fill First Name, Last Name, Email address, category, Description</li>
+                            <!-- <li>Please fill First Name, Last Name, Email address, category, Description</li>
                             <li>Please enter valid email adress.</li>
-                            <li>Please enter valid phone number.</li>
+                            <li>Please enter valid phone number.</li> -->
                         </ul>
                     </div>
                     <label for="fname">First Name: </label>
-                    <input name="fname" aria-label="fname" type="text" required>
+                    <input id="fname" name="fname" aria-label="fname" type="text" placeholder="First name" required>
                     <label for="lname">Last Name: </label>
-                    <input name="lname" aria-label="lname" type="text" required>
+                    <input id="lname" name="lname" aria-label="lname" type="text" placeholder="Last name" required>
                     <label for="email">Email: </label>
-                    <input name="email" aria-label="email" type="email" required>
+                    <input id="email" name="email" aria-label="contact-email" type="contact-email"  placeholder="email@braveblossoms.com" required>
                     <label for="phone">Phone: </label>
-                    <input name="phone" aria-label="phone" type="phone">
+                    <input id="phone" name="phone" aria-label="phone" type="phone" >
                     <label for="category" class="left">Category: </label>
                     <select name="category" required>
                         <option type="checkbox" aria-label="checkbox_team">About Team</option>
@@ -770,7 +770,7 @@
                         <option type="checkbox" aria-label="checkbox_team">About Team</option>
                     </select>
                     <label for="query" class="left">Description: </label>
-                    <textarea name="query" aria-label="query" type="text" required></textarea>
+                    <textarea id="query" name="query" aria-label="query" type="text" required></textarea>
                     <label for="file" class="left">Select a file:</label>
                     <input type="file" id="file" name="file">
                     <input type="submit" value="Send Message" aria-label="submit">
