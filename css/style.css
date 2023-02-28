@@ -97,7 +97,8 @@ section#learn_rugby nav ul li:hover,
 section#learn_rugby nav ul li.active,
 aside#matches nav ul li:hover,
 aside#matches nav ul li.active,
-#second-nav ul li:hover{
+#second-nav ul li:hover,
+#second-nav ul li.active{
     background-color: rgba(240, 113, 121);
 }
 

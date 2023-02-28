@@ -25,9 +25,9 @@
             <div class="wrapper">
                 <nav id="second-nav">
                     <ul>
-                        <li class="second-nav-list active"><a href="#welcome">WELCOME</a></li>
-                        <li class="second-nav-list"><a href="#teams">ABOUT TEAM</a></li>
-                        <li class="second-nav-list"><a href="#learn_rugby">LEARN RUGBY</a></li>
+                        <li class="second-nav-list active" data-nav="welcome">WELCOME</li>
+                        <li class="second-nav-list" data-nav="teams">ABOUT TEAM</li>
+                        <li class="second-nav-list" data-nav="learn_rugby">LEARN RUGBY</li>
                     </ul>
                 </nav>
                 <section id="welcome">
@@ -746,8 +746,8 @@
                     <div class="contact_point"></div>
                 </section>
                 <form id="contact-form">
-                    <div class="alert hidden">
-                        <ul>
+                    <div id ="alert" class="alert hidden">
+                        <ul id="alert-list">
                             <!-- <li>Please fill First Name, Last Name, Email address, category, Description</li>
                             <li>Please enter valid email adress.</li>
                             <li>Please enter valid phone number.</li> -->
@@ -773,7 +773,7 @@
                     <textarea id="query" name="query" aria-label="query" type="text" required></textarea>
                     <label for="file" class="left">Select a file:</label>
                     <input type="file" id="file" name="file">
-                    <input type="submit" value="Send Message" aria-label="submit">
+                    <input type="submit" id="contact-submit" value="Send Message" aria-label="submit">
                 </form>
             </div> 
         </aside>

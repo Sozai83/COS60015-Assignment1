@@ -7,6 +7,9 @@ const contact = document.getElementById('contact');
 const NavList = [matches, home, contact];
 const firstNavLists = [...document.querySelectorAll(".top-nav-list")];
 
+const secondNav = document.getElementById("second-nav");
+const secondNavLists = [...document.querySelectorAll(".second-nav-list")];
+
 const ruleNav = document.getElementById("rule-nav");
 const begginer =  document.getElementById("begineer-rules");
 const advance =  document.getElementById("advance-rules");
@@ -31,8 +34,19 @@ const memberCardsContainers = [...document.querySelectorAll(".team-member")];
 
 const firstName = document.getElementById("fname");
 const lastName = document.getElementById("lname");
-const email = document.getElementById("contact-email");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
 const query = document.getElementById("query");
+const requiredFields = ['fname', 'lname', 'email', 'query'];
+const requiredFieldsVal = {
+    'fname': 'First Name',
+    'lname': 'Last Name',
+    'email': 'Email',
+    'query': 'Description'
+}
+const submitContact = document.getElementById('contact-submit');
+const alertContainer = document.getElementById('alert');
+const alertList = document.getElementById('alert-list');
 
 
 let teamActive = 0;
@@ -58,19 +72,45 @@ const addActive = function(el){
 }
 
 const emailValidation = function(){
-    let validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    let validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value);
     return validation
 }
 
 const phoneValidation = function(){
-    let validation = true;
+    let validation = /^\d{10}$/.test(phone.value);
     return validation
 }
 
-const requiredValidation = function(){
+const requiredValidation = function(list){
     let emptyRequiedFields = [];
+    for (let item in list){
+        let value = document.getElementById(list[item]).value;
+        if (value.length <= 0){
+            emptyRequiedFields.push(list[item]);
+        }
+    }
+    return emptyRequiedFields;
+}
 
-    reutrn
+const generateValidationHthml = function(){
+    let html = '';
+    let emailVal = emailValidation();
+    let phoneVal = phoneValidation();
+    let requiredVal = requiredValidation(requiredFields);
+    if(requiredVal.length > 0){
+        html += '<li>Please fill ';
+        for(let field in requiredVal){
+            html += `${requiredFieldsVal[requiredVal[field]]}, `;
+        }
+        html = html.slice(0, -2) + '</li>'
+    }
+    if(!emailVal){
+        html += '<li>Please enter valid email adress.</li>';
+    }
+    if(!phoneVal){
+        html += '<li>Please enter valid phone number.</li>';
+    }
+    return html;
 }
 
 const getAxisX = function(){
@@ -167,6 +207,17 @@ firstNav.addEventListener('click', function(e){
     }
 });
 
+secondNav.addEventListener('click', function(e){
+    e.preventDefault();
+    if (e.target.tagName == "LI"){
+        let selected = e.target.dataset.nav;
+        let selectedEl = document.getElementById(selected);
+        selectedEl.scrollIntoView();
+        removeActive(secondNavLists);
+        addActive(e.target);
+    }
+});
+
 ruleNav.addEventListener('click', function(e){
     e.preventDefault();
     if (e.target.tagName == "LI"){
@@ -256,5 +307,20 @@ document.addEventListener("click", function(e){
     if(e.target == memberPooupClose || e.target == memberPopup){
         e.preventDefault();
         memberPopup.remove();
+    }
+});
+
+submitContact.addEventListener('click', function(e){
+    e.preventDefault();
+    while (alertList.hasChildNodes()) {
+        alertList.removeChild(alertList.firstChild);
+    }
+    let html = generateValidationHthml();
+    if (html.length > 0){
+        showElement(alertContainer);
+        alertList.insertAdjacentHTML("afterbegin", html);
+    }else if(html.length == 0){
+        hideElement([alertContainer]);
+        console.log('ok');
     }
 });
