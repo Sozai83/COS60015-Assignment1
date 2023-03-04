@@ -1,15 +1,20 @@
 import teams from "./team_data.js";
 
+/* Variables - Web App Elements */
+// Elements related to first navigation
 const firstNav = document.getElementById("top-nav");
 const matches = document.getElementById('matches');
 const home =  document.getElementById('home');
 const contact = document.getElementById('contact');
 const NavList = [matches, home, contact];
 const firstNavLists = [...document.querySelectorAll(".top-nav-list")];
+const header = document.querySelector("header");
 
+// Elements related to second navigation
 const secondNav = document.getElementById("second-nav");
 const secondNavLists = [...document.querySelectorAll(".second-nav-list")];
 
+// Elements related to second ruies navigation
 const ruleNav = document.getElementById("rule-nav");
 const begginer =  document.getElementById("begineer-rules");
 const advance =  document.getElementById("advance-rules");
@@ -17,6 +22,7 @@ const changes =  document.getElementById("recent-changes");
 const ruleList = [begginer, advance, changes];
 const ruleNavLists = [...document.querySelectorAll(".rule-list")];
 
+// Elements related to second matches navigation
 const matchNav = document.getElementById("match-nav");
 const _2023 =  document.getElementById("matches_2023");
 const _2022 =  document.getElementById("matches_2022");
@@ -24,19 +30,20 @@ const _2021 =  document.getElementById("matches_2021");
 const matchList = [_2023, _2022, _2021];
 const matchNavLists = [...document.querySelectorAll(".match-list")];
 
+// Elements related to second footer navigation
+const footerNav = document.getElementById("footer-nav");
+
+// Elements related to teams section
 const teamContainer = document.getElementById("team-members-wrapper");
 const teamContainer2 = document.getElementById("team-members");
 const prevDirection = document.querySelector(".prev");
 const nextDirection = document.querySelector(".next");
 const teamsDotsContainer = document.getElementsByClassName("teams-dots")[0];
 const teamDots = [...document.querySelectorAll(".dot")];
-const memberCardsContainers = [...document.querySelectorAll(".team-member")];
 
-const firstName = document.getElementById("fname");
-const lastName = document.getElementById("lname");
+// Elements related to contact section
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
-const query = document.getElementById("query");
 const requiredFields = ['fname', 'lname', 'email', 'query'];
 const requiredFieldsVal = {
     'fname': 'First Name',
@@ -48,39 +55,48 @@ const submitContact = document.getElementById('contact-submit');
 const alertContainer = document.getElementById('alert');
 const alertList = document.getElementById('alert-list');
 
-
+// Count for team member calousel
 let teamActive = 0;
 
+
+/* Functions */
+//Hides elements in the list
 const hideElement = function(list){
     for (let item in list){
         list[item].classList.add("hidden");
     }
 }
 
+// Show an element passed
 const showElement = function(el){
         el.classList.remove("hidden");    
 }
 
+// Remove "active" from the class list from the elements in the list
 const removeActive = function(list){
     for(let item in list){
         list[item].classList.remove("active");
     }
 }
 
+// Add "active" into class list to the element passed
 const addActive = function(el){
     el.classList.add("active");
 }
 
-const emailValidation = function(){
+// Validate email - returns True or False
+const emailValidation = function(email){
     let validation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value);
     return validation
 }
 
-const phoneValidation = function(){
+// Validate phone number - returns True or False
+const phoneValidation = function(phone){
     let validation = /^\d{10}$/.test(phone.value);
     return validation
 }
 
+// Check if the required fields have values - returns True or False
 const requiredValidation = function(list){
     let emptyRequiedFields = [];
     for (let item in list){
@@ -92,6 +108,7 @@ const requiredValidation = function(list){
     return emptyRequiedFields;
 }
 
+// Generates HTML code to show the validation warning
 const generateValidationHthml = function(){
     let html = '';
     let emailVal = emailValidation();
@@ -113,6 +130,7 @@ const generateValidationHthml = function(){
     return html;
 }
 
+
 const getAxisX = function(){
     let style = getComputedStyle(teamContainer2);
     let transform = style.transform.split(',');
@@ -128,32 +146,20 @@ const generateTeamHTML = function(member){
             <a class="close" href="#">&times;</a>
             <section class="bio">
                 <figure>
-                    <img src="./img/members/${member.id}.jpg" alt="fw1">
+                    <img src="./img/members/${member.id}.jpg" alt="${member.name}">
                 </figure>
                 <table>
                     <tr>
                         <th>Age</th>
                         <th>Weight</th>
                         <th>Height</th>
-                        <th>Games</th>
+                        <th>Caps</th>
                     </tr>
                     <tr>
                         <td>${member.age}</td>
                         <td>${member.weight}</td>
                         <td>${member.height}</td>
-                        <td>${member.games}</td>
-                    </tr>
-                    <tr>
-                        <th>Points</th>
-                        <th>Tries</th>
-                        <th>Conv</th>
-                        <th>Pen</th>
-                    </tr>
-                    <tr>
-                        <td>${member.points}</td>
-                        <td>${member.tries}</td>
-                        <td>${member.conv}</td>
-                        <td>${member.pen}</td>
+                        <td>${member.caps}</td>
                     </tr>
                 </table>
             </section>
@@ -173,19 +179,19 @@ const generateTeamHTML = function(member){
             <h3 class="news">News</h3>
             <figure id="news">
                 <figure>
-                    <img src="./img/placeholder2.png" alt="${member.id}_news1">
+                    <img src="./img/news/news1.jpg" alt="${member.news1Title}_news1">
                     <figcaption class="${member.id}_news"><a href="${member.news1}">${member.news1Title}</a></figcaption>
                 </figure>
                 <figure>
-                    <img src="./img/placeholder2.png" alt="${member.id}_news2">
+                    <img src="./img/news/news2.png" alt="${member.news2Title}_news2">
                     <figcaption class="${member.id}_news"><a href="${member.news2}">${member.news2Title}</a></figcaption>
                 </figure>
                 <figure>
-                    <img src="./img/placeholder2.png" alt="${member.id}_news3">
+                    <img src="./img/news/news3.png" alt="${member.news3Title}_news3">
                     <figcaption class="${member.id}_news"><a href="${member.news3}">${member.news3Title}</a></figcaption>
                 </figure>
                 <figure>
-                    <img src="./img/placeholder2.png" alt="${member.id}_news4">
+                    <img src="./img/news/news4.png" alt="${member.news4Title}_news4">
                     <figcaption class="${member.id}_news"><a href="${member.news4}">${member.news4Title}</a></figcaption>
                 </figure>
             </figure>
@@ -197,13 +203,13 @@ const generateTeamHTML = function(member){
 
 firstNav.addEventListener('click', function(e){
     e.preventDefault();
-    if (e.target.tagName == "A"){
+    if (e.target.tagName == "A" || e.target.tagName == "LI"){
         hideElement(NavList);
         let selected = e.target.dataset.nav;
         let selectedEl = document.getElementById(selected);
         showElement(selectedEl);
         removeActive(firstNavLists);
-        addActive(e.target.parentNode);
+        addActive(e.target);
     }
 });
 
@@ -239,6 +245,27 @@ matchNav.addEventListener('click', function(e){
         showElement(selectedEl);
         removeActive(matchNavLists);
         addActive(e.target);
+    }
+});
+
+footerNav.addEventListener('click', function(e){
+    e.preventDefault();
+    if (e.target.tagName == "LI"){
+        let selected = e.target.dataset.nav.split('-');
+        let topNav = selected[0];
+        let position = selected[1];
+        let selectedEl1 = document.getElementById(topNav);
+        let selectedEl2 = document.getElementById(position);
+        let selectedNav = document.getElementById(`nav-${topNav}`);
+        hideElement(NavList);
+        showElement(selectedEl1);
+        removeActive(firstNavLists);
+        addActive(selectedNav);
+        if(position == "top"){
+            header.scrollIntoView();
+        }else{
+            selectedEl2.scrollIntoView();
+        }
     }
 });
 

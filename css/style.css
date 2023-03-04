@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -25,7 +30,7 @@ address{
 
 h1{
     padding: 20px 0;
-    font-size: 3em; 
+    font-size: 3.2em; 
 }
    
 h2{
@@ -38,14 +43,48 @@ h3{
    padding-bottom: 20px;
 }
 
+h1, h2,h3{
+    line-height: 1em;
+}
+
+p{
+    padding-bottom: 10px;
+}
+
 .wrapper{
     max-width: 1200px;
     margin: 0 auto;
 }
 
+header .logo{
+    padding: 20px;
+    background-color: rgb(240, 113, 121);
+}
+
+header .logo div.wrapper{
+    display: flex;
+}
+
+header .logo img{
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+}
+
+header .logo h4{
+    width: 300px;
+    align-self: center;
+}
+
 #top-nav{
     margin:0 auto;
     padding: 40px 0px 20px 0px;
+}
+
+#second-nav,
+section#learn_rugby nav,
+aside#matches nav{
+    margin: 20px 0 40px 0;
 }
 
 #top-nav ul,
@@ -210,7 +249,7 @@ section.match_card{
 
 section#teams div#team-members-container{
     width: 1120px;
-    height: 200px;
+    height: 240px;
     overflow: hidden;
 }
 
@@ -235,8 +274,15 @@ section#team-details figure img{
     padding-right: 20px;
     display: block;
     margin: 0 auto;
+}
+
+section#teams div#team-members figure img{
     width: 170px;
     height: 180px;
+}
+section#team-details figure img{
+    width: 300px;
+    height: 300px;
 }
 
 section#teams figure figcaption{
@@ -293,6 +339,7 @@ section#team-details figure#news img{
     left: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
+    z-index: 100;
 }
 
 .hidden{
@@ -322,7 +369,7 @@ section#team-details .close {
 }
 
 section#team-details .close:hover {
-    color: #06D85F;
+    color: rgba(240, 113, 121);
 }
 
 section#learn_rugby .rule-card{
@@ -334,16 +381,15 @@ section#learn_rugby article{
     padding: 20px 0;
 }
 
-section#learn_rugby .rule-card article p{
+section#learn_rugby .rule-card article div{
     align-self: center;
+    width: 100%;
+    margin-right: 20px;
 }
 
 section#learn_rugby .rule-card article figure{
+    align-self: center;
     width: 80%;
-}
-
-section#learn_rugby .rule-card article figure img{
-    width: 100%;
 }
 
 section.match_card{
@@ -428,6 +474,11 @@ section.match_card .match_schedule table{
     width: 100%;
 }
 
+section.match_card .button{
+    width: 100%;
+    text-align: center;
+}
+
 section.match_card button{
     margin-top: 40px;
     padding:10px 20px;
@@ -442,10 +493,9 @@ aside#contact header{
     position: relative;
 }
 
-aside#contact header h2{
+aside#contact header h1{
     color: #fff;
     padding: 40px 100px;
-    font-size: 64px;
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     bottom: 0;
@@ -556,4 +606,8 @@ footer section#footer{
 
 #footer-nav div{
     margin-right: 20px;
+}
+
+#footer-nav li{
+    padding: 4px;
 }

@@ -15,3 +15,9 @@ Menu border
   https://www.w3resource.com/javascript/form/email-validation.php
 
   https://www.editorx.com/shaping-design/article/font-size
+
+  https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+
+  http://en.rugby-japan.jp/site_rule/
+
+  https://www.youtube.com/playlist?list=PLbfKYaz0oD0ZnX8O7uOpG1pKtz8L5Ezkn
