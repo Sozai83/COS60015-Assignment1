@@ -51,13 +51,16 @@ const requiredFieldsVal = {
     'fname': 'First Name',
     'lname': 'Last Name',
     'email': 'Email',
-    'query': 'Description'
+    'query': 'Description',
+    'submail': 'Email'
 }
+const contactForm = document.getElementById('contact-form');
 const submitContact = document.getElementById('contact-submit');
 const alertContainer = document.getElementById('alert');
 const alertList = document.getElementById('alert-list');
 
 //Elements related to subscribe section
+const subscribeForm = document.getElementById('subscribe-form');
 const submitSubscribe = document.getElementById('subscribe-submit');
 const subEmail = document.getElementById('submail');
 const subAlertContainer = document.getElementById('alert-sub');
@@ -195,19 +198,19 @@ const generateTeamHTML = function(member){
             <figure id="news">
                 <figure>
                     <img src="./img/news/news1.jpg" alt="${member.news1Title}_news1">
-                    <figcaption class="${member.id}_news"><a href="${member.news1}">${member.news1Title}</a></figcaption>
+                    <figcaption class="${member.id}_news"><a href="${member.news1}" target="_blank">${member.news1Title}</a></figcaption>
                 </figure>
                 <figure>
                     <img src="./img/news/news2.jpg" alt="${member.news2Title}_news2">
-                    <figcaption class="${member.id}_news"><a href="${member.news2}">${member.news2Title}</a></figcaption>
+                    <figcaption class="${member.id}_news"><a href="${member.news2}" target="_blank">${member.news2Title}</a></figcaption>
                 </figure>
                 <figure>
                     <img src="./img/news/news3.jpg" alt="${member.news3Title}_news3">
-                    <figcaption class="${member.id}_news"><a href="${member.news3}">${member.news3Title}</a></figcaption>
+                    <figcaption class="${member.id}_news"><a href="${member.news3}" target="_blank">${member.news3Title}</a></figcaption>
                 </figure>
                 <figure>
                     <img src="./img/news/news4.jpg" alt="${member.news4Title}_news4">
-                    <figcaption class="${member.id}_news"><a href="${member.news4}">${member.news4Title}</a></figcaption>
+                    <figcaption class="${member.id}_news"><a href="${member.news4}" target="_blank">${member.news4Title}</a></figcaption>
                 </figure>
             </figure>
         </section>
@@ -365,6 +368,7 @@ submitContact.addEventListener('click', function(e){
         hideElement([alertContainer]);
         clearValues(clearFields);
         fileInput.value = null;
+        // contactForm.submit();
         alert("Thank you for submitting the form. We will be in touch with you soon.");
         console.log(`Form submitted. Values`);
     }
@@ -382,6 +386,7 @@ submitSubscribe.addEventListener('click', function(e){
     }else if(html.length == 0){
         hideElement([subAlertContainer]);
         clearValues(['submail']);
+        // subscribeForm.submit();
         alert("Thank you for subscribing to Brave Blossom.");
         console.log(`Form submitted. Values`);
     }

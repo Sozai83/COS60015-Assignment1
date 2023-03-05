@@ -200,7 +200,7 @@ section#teams #team-members-wrapper button:hover{
     background-color:  rgba(255, 0, 0, 0.6);
 }
 
-section#teams #team-members-wrapper a{
+section#teams #team-members-wrapper span{
     font-size: 36px;
     position: absolute;
     top: calc(50% - 36px);
@@ -487,15 +487,24 @@ section.match_card .match_schedule table{
     width: 100%;
 }
 
-section.match_card .button{
+section.match_card .buy-ticket{
     width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+section.match_card .button{ 
+    padding:10px 40px;
+    width: 100%;
+    background-color: rgb(240, 113, 121);
+    border:#252525 2px solid;
+    border-radius: 10px;
     text-align: center;
 }
 
-section.match_card button{
-    margin-top: 40px;
-    padding:10px 20px;
-    width: 50%;
+section.match_card .button:hover{
+    cursor: pointer;
+    background-color: #fff;
 }
 
 aside#contact header{
@@ -594,12 +603,16 @@ section#subscription{
 }
 
 footer section#subscription input{
-    width: 30%;
+    width: 28%;
     margin-right: 20px;
 }
 
 footer section#subscription select{
     width: 20%;
+}
+
+footer section#subscription #alert-sub{
+    color: red;
 }
 
 section#footer > div{
@@ -628,4 +641,16 @@ footer section#footer{
 #footer-nav li:hover{
     cursor: pointer;
     color:#fff;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:300px;
+    width:400px;
+}
+
+.gmap_canvas iframe{
+    border: none;
+    margin: 0;
 }
