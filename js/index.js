@@ -1,3 +1,4 @@
+// Imports teams object from the teams_data.js module
 import teams from "./team_data.js";
 
 /* Variables - Web App Elements */
@@ -122,9 +123,9 @@ const requiredValidation = function(list){
 // Generates HTML code to show the validation warning
 const generateValidationHthml = function(email, phone, requiredFields){
     let html = '';
-    let emailVal = email ? emailValidation(email) : true;
-    let phoneVal = phone ? phoneValidation(phone) : true;
-    let requiredVal = requiredFields.length > 0 ? requiredValidation(requiredFields) : "";
+    let emailVal = email ? emailValidation(email) : true; //Checks if the validation for email is passed or not
+    let phoneVal = phone ? phoneValidation(phone) : true; //Checks if the validation for phone is passed or not
+    let requiredVal = requiredFields.length > 0 ? requiredValidation(requiredFields) : ""; //Checks if the validation for required fields is passed or not
     if(requiredVal.length > 0){
         html += '<li>Please fill ';
         for(let field in requiredVal){
@@ -148,7 +149,7 @@ const clearValues = function(list){
     }
 }
 
-
+// Get current position of the team member calousel
 const getAxisX = function(){
     let style = getComputedStyle(teamContainer2);
     let transform = style.transform.split(',');
@@ -156,6 +157,7 @@ const getAxisX = function(){
     return axisX
 }
 
+// Generate team member details HTML code
 const generateTeamHTML = function(member){
     let html = `
     <div id="member-popup" class="overlay">
@@ -219,6 +221,10 @@ const generateTeamHTML = function(member){
     return html;
 }
 
+/*Event Listners*/
+
+/*Navigation Controllers*/
+// Contorller for the top navigation bar
 firstNav.addEventListener('click', function(e){
     e.preventDefault();
     if (e.target.tagName == "A" || e.target.tagName == "LI"){
@@ -231,6 +237,7 @@ firstNav.addEventListener('click', function(e){
     }
 });
 
+// Contorller for the second navigation bar
 secondNav.addEventListener('click', function(e){
     e.preventDefault();
     if (e.target.tagName == "LI"){
@@ -242,6 +249,7 @@ secondNav.addEventListener('click', function(e){
     }
 });
 
+// Controller for the rule navigation bar
 ruleNav.addEventListener('click', function(e){
     e.preventDefault();
     if (e.target.tagName == "LI"){
@@ -254,6 +262,7 @@ ruleNav.addEventListener('click', function(e){
     }
 });
 
+// Contorller for the match navigation bar
 matchNav.addEventListener('click', function(e){
     e.preventDefault();
     if (e.target.tagName == "LI"){
@@ -266,6 +275,7 @@ matchNav.addEventListener('click', function(e){
     }
 });
 
+// Contorller for the footer navigation
 footerNav.addEventListener('click', function(e){
     e.preventDefault();
     if (e.target.tagName == "LI"){
@@ -287,6 +297,8 @@ footerNav.addEventListener('click', function(e){
     }
 });
 
+/*Teams section Controllers*/
+// Shows the direction buttons for the calousel when user hover over on the teams container
 teamContainer.addEventListener('mouseover', function(){
     let position = getAxisX();
     if (position !== 0){
@@ -297,10 +309,12 @@ teamContainer.addEventListener('mouseover', function(){
     }
 });
 
+// Hides the direction buttons for the calousel when user's mouse is out of the teams container
 teamContainer.addEventListener('mouseout', function(){
     hideElement([prevDirection,nextDirection]);
 });
 
+// When next button > is clicked, it will move to the next section
 nextDirection.addEventListener('click', function(e){
     e.preventDefault();
     let position = getAxisX();
@@ -313,6 +327,7 @@ nextDirection.addEventListener('click', function(e){
     }
 });
 
+// When previoius button < is clicked, it will move to the next section
 prevDirection.addEventListener('click', function(e){
     e.preventDefault();
     let position = getAxisX();
@@ -325,6 +340,7 @@ prevDirection.addEventListener('click', function(e){
     }
 });
 
+// When one of the dots below the team members calousel is clicked, it takes to the secition chosen.
 teamsDotsContainer.addEventListener("click", function(e){
     e.preventDefault();
     if (e.target.tagName == "BUTTON"){
@@ -336,6 +352,7 @@ teamsDotsContainer.addEventListener("click", function(e){
     }
 });
 
+// When one of the team member cards is clicked, it pops up the team member's details 
 teamContainer2.addEventListener("click", function(e){
     e.preventDefault();
     if(e.target.tagName == "IMG"){
@@ -346,6 +363,7 @@ teamContainer2.addEventListener("click", function(e){
     }
 });
 
+// When close button or the overlay section are clicked, it closes the pop up 
 document.addEventListener("click", function(e){
     const memberPopup = document.getElementById("member-popup");
     const memberPooupClose = document.querySelector(".close");
@@ -355,6 +373,7 @@ document.addEventListener("click", function(e){
     }
 });
 
+/*Forms Controllers*/
 submitContact.addEventListener('click', function(e){
     e.preventDefault();
     while (alertList.hasChildNodes()) {
@@ -368,7 +387,7 @@ submitContact.addEventListener('click', function(e){
         hideElement([alertContainer]);
         clearValues(clearFields);
         fileInput.value = null;
-        // contactForm.submit();
+        // contactForm.submit(); - Currently disabled as at this point, we cannot submit the form
         alert("Thank you for submitting the form. We will be in touch with you soon.");
         console.log(`Form submitted. Values`);
     }
@@ -386,7 +405,7 @@ submitSubscribe.addEventListener('click', function(e){
     }else if(html.length == 0){
         hideElement([subAlertContainer]);
         clearValues(['submail']);
-        // subscribeForm.submit();
+        // subscribeForm.submit(); - Currently disabled as at this point, we cannot submit the form
         alert("Thank you for subscribing to Brave Blossom.");
         console.log(`Form submitted. Values`);
     }

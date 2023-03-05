@@ -1,7 +1,3 @@
-Photo by CHUTTERSNAP on Unsplash
-
-Photo by <a href="https://unsplash.com/@designer4u?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Olga Guryanova</a> on <a href="https://unsplash.com/photos/ft7vJxwl2RY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
 
   popup
   https://codepen.io/imprakash/pen/GgNMXO

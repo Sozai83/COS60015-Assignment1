@@ -1,3 +1,5 @@
+/*Default Styling*/
+
 * {
     margin: 0;
     padding: 0;
@@ -22,6 +24,11 @@ ul{
 
 a{
     text-decoration: none;
+    color: #252525;
+}
+
+a:hover{
+    color:rgb(240, 113, 121);
 }
 
 address{
@@ -51,11 +58,26 @@ p{
     padding-bottom: 10px;
 }
 
+input{
+    font-size: 16px;
+}
+
 .wrapper{
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.hidden{
+    display:none;
+}
+
+i.credit{
+    text-align: right;
+    float: right;
+    font-size: 12px;
+}
+
+/*Header*/
 header .logo{
     padding: 20px;
     background-color: rgb(240, 113, 121);
@@ -76,6 +98,11 @@ header .logo h4{
     align-self: center;
 }
 
+.gohome a:hover{
+    color:#fff;
+}
+
+/*Navigations*/
 #top-nav{
     margin:0 auto;
     padding: 40px 0px 20px 0px;
@@ -149,6 +176,8 @@ aside#contact{
     padding: 40px;
 }
 
+/*Welcome*/
+
 section#welcome{
     margin-top: 20px;
     height: 50vh;
@@ -168,6 +197,8 @@ section#welcome article{
     padding: 20px;
     width: 800px;
 }
+
+/*Teams*/
 
 section#teams h2{
     padding-top: 20px;
@@ -280,6 +311,12 @@ section#teams div#team-members figure img{
     width: 170px;
     height: 180px;
 }
+
+section#teams div#team-members figure img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 section#team-details figure img{
     width: 300px;
     height: 300px;
@@ -290,10 +327,18 @@ section#teams figure figcaption{
     text-align: center;
 }
 
+/*Team member details popup*/
+
 section#team-details{
     padding: 20px;
     background: #fff;
     border: 1px black solid;
+    margin: 10vh auto;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 1120px;
+    position: relative;
+    transition: all 5s ease;
 }
 
 section#team-details section.bio{
@@ -355,21 +400,6 @@ section#team-details figure#news img{
     z-index: 100;
 }
 
-.hidden{
-    display:none;
-}
-
-section#team-details{
-    margin: 10vh auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 1120px;
-    position: relative;
-    transition: all 5s ease;
-}
-
 section#team-details .close {
     position: absolute;
     top: 20px;
@@ -384,6 +414,9 @@ section#team-details .close {
 section#team-details .close:hover {
     color: rgba(240, 113, 121);
 }
+
+
+/*Learn Rugby*/
 
 section#learn_rugby .rule-card{
     margin-top: 40px;
@@ -405,9 +438,11 @@ section#learn_rugby .rule-card article figure{
     width: 80%;
 }
 
+/*Matches*/
+
 section.match_card{
     padding: 40px 0;
-    border-bottom: 5px rgba(255, 0, 0) solid;
+    border-bottom: 5px rgba(240, 113, 121) solid;
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: 100%;
@@ -507,6 +542,7 @@ section.match_card .button:hover{
     background-color: #fff;
 }
 
+/*Contact Form*/
 aside#contact header{
     height: 30vh;
     background:url(../img/contact.jpg);
@@ -597,6 +633,7 @@ input[type="submit"]{
     float: right;
 }
 
+/*Subscription Form*/
 section#subscription{
     padding: 20px 40px;
     margin-bottom: 20px;
@@ -615,6 +652,7 @@ footer section#subscription #alert-sub{
     color: red;
 }
 
+/*Footer*/
 section#footer > div{
     display: flex;
     justify-content: space-between;
@@ -624,6 +662,10 @@ section#footer > div{
 footer section#footer{
     padding: 40px;
     background-color: rgba(240, 113, 121);
+}
+
+footer a:hover{
+    color:#fff;
 }
 
 #footer-nav{
@@ -643,6 +685,13 @@ footer section#footer{
     color:#fff;
 }
 
+/*Privacy policy and T&C*/
+.privacy-policy{
+    margin: 40px auto;
+}
+
+/*iframe Styling*/
+
 .gmap_canvas {
     overflow:hidden;
     background:none!important;
@@ -650,7 +699,7 @@ footer section#footer{
     width:400px;
 }
 
-.gmap_canvas iframe{
+iframe{
     border: none;
     margin: 0;
 }
