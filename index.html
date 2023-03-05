@@ -8,6 +8,7 @@
         <meta name="author" content="John Doe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
+        <script src="https://kit.fontawesome.com/109e5d926d.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
@@ -784,9 +785,9 @@
                     <div class="contact_details">
                         <h3>Please use the form below to contact us!</h3>
                         <h4>We would love to hear from you :)</h4>
-                        <address><b>Address: </b>Brunton Ave, Richmond VIC 3002</address>
-                        <email><b>Email: </b><a href="">email@braveblossoms.com</a></email>
-                        <b>Phone: </b><a href="" class="phone">(03) 9657 8888</a>
+                        <address><b>Address: </b>xxx xxxx xxxxx Tokyo, Japan</address>
+                        <email><b>Email: </b><a href="mailto:email@braveblossoms.com">email@braveblossoms.com</a></email>
+                        <b>Phone: </b><a href="tel:123-456-789" class="phone">123-456-789</a>
                     </div>
                     <div class="contact_point"></div>
                 </section>
@@ -808,11 +809,10 @@
                     <input id="phone" name="phone" aria-label="phone" type="phone" >
                     <label for="category" class="left">Category: </label>
                     <select name="category" required>
-                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                        <option type="checkbox" aria-label="checkbox_game">About Game</option>
-                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
-                        <option type="checkbox" aria-label="checkbox_team">About Team</option>
+                        <option type="checkbox" value="supportTeam" aria-label="checkbox_team">Support Team</option>
+                        <option type="checkbox" value="aboutGame" aria-label="checkbox_game">About Game</option>
+                        <option type="checkbox" value="feedback" aria-label="checkbox_team">Feedback</option>
+                        <option type="checkbox" value="otherGeneralQueries" aria-label="checkbox_team" selected>Other General Queries</option>
                     </select>
                     <label for="query" class="left">Description: </label>
                     <textarea id="query" name="query" aria-label="query" type="text" required></textarea>
@@ -827,21 +827,27 @@
                 <section id="subscription">
                     <h2>Subscribe to news letters</h2>
                     <form>
+                        <div id ="alert-sub" class="alert hidden">
+                            <ul id="alert-list-sub">
+                                <!-- <li>Please fill Email address</li>
+                                <li>Please enter valid email adress.</li> -->
+                            </ul>
+                        </div>
                         <label for="subemail">Email: </label>
-                        <input type="email" name="subemail" aria-label="submail" placeholder="abc@braveblossoms.com.au">
+                        <input type="email" id="submail" name="subemail" aria-label="submail" placeholder="abc@braveblossoms.com.au" required>
                         <label for="area" class="dropdown">Areas: </label>
                         <select name="area">
-                            <option type="checkbox" aria-label="any">Any</option>
-                            <option type="checkbox" aria-label="hokkaido">Hokkaido</option>
-                            <option type="checkbox" aria-label="tohoku">Tohoku</option>
-                            <option type="checkbox" aria-label="kanto">Kanto</option>
-                            <option type="checkbox" aria-label="tokai">Tokai</option>
-                            <option type="checkbox" aria-label="kansai">Kansai</option>
-                            <option type="checkbox" aria-label="shikoku">Shikoku</option>
-                            <option type="checkbox" aria-label="kyushu">Kyushu</option>
-                            <option type="checkbox" aria-label="Okinawa">Okinawa</option>
+                            <option type="checkbox" value="any" aria-label="any" selected>Any</option>
+                            <option type="checkbox" value="hokkaido" aria-label="hokkaido">Hokkaido</option>
+                            <option type="checkbox" value="tohoku" aria-label="tohoku">Tohoku</option>
+                            <option type="checkbox" value="tohoku" aria-label="kanto">Kanto</option>
+                            <option type="checkbox" value="tokai" aria-label="tokai">Tokai</option>
+                            <option type="checkbox" value="kansai" aria-label="kansai">Kansai</option>
+                            <option type="checkbox" value="shikoku" aria-label="shikoku">Shikoku</option>
+                            <option type="checkbox" value="kyushu" aria-label="kyushu">Kyushu</option>
+                            <option type="checkbox" value="okinawa" aria-label="Okinawa">Okinawa</option>
                         </select>
-                        <input type="submit" value="Follow Brave Blossoms!" aria-label="submit">
+                        <input type="submit" id="subscribe-submit" value="Follow Brave Blossoms!" aria-label="submit">
                     </form>
                 </section>
             </div>
@@ -869,13 +875,12 @@
                     </nav>
                     <div id="footer-contact">
                         <p>Contact:</p>
-                        <address>xxx xxxx xxxxx Victoria 3000</address>
-                        <email>xxx.xxx@xxxx.com</email>
+                        <address>Address: xxx xxxx xxxxx Tokyo, Japan</address>
+                        <email>Email: <a href="mailto:email@braveblossoms.com">email@braveblossoms.com</a></email>
                     </div>
                 </div>
             </section>
         </footer>
-        
         <script src="./js/index.js" type="module"></script>
     </body>
 </html>

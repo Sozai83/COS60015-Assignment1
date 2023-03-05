@@ -44,7 +44,9 @@ const teamDots = [...document.querySelectorAll(".dot")];
 // Elements related to contact section
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
+const fileInput = document.getElementById("file");
 const requiredFields = ['fname', 'lname', 'email', 'query'];
+const clearFields = ['fname', 'lname', 'email', 'phone', 'query'];
 const requiredFieldsVal = {
     'fname': 'First Name',
     'lname': 'Last Name',
@@ -54,6 +56,12 @@ const requiredFieldsVal = {
 const submitContact = document.getElementById('contact-submit');
 const alertContainer = document.getElementById('alert');
 const alertList = document.getElementById('alert-list');
+
+//Elements related to subscribe section
+const submitSubscribe = document.getElementById('subscribe-submit');
+const subEmail = document.getElementById('submail');
+const subAlertContainer = document.getElementById('alert-sub');
+const subAlertList = document.getElementById('alert-list-sub');
 
 // Count for team member calousel
 let teamActive = 0;
@@ -109,11 +117,11 @@ const requiredValidation = function(list){
 }
 
 // Generates HTML code to show the validation warning
-const generateValidationHthml = function(){
+const generateValidationHthml = function(email, phone, requiredFields){
     let html = '';
-    let emailVal = emailValidation();
-    let phoneVal = phoneValidation();
-    let requiredVal = requiredValidation(requiredFields);
+    let emailVal = email ? emailValidation(email) : true;
+    let phoneVal = phone ? phoneValidation(phone) : true;
+    let requiredVal = requiredFields.length > 0 ? requiredValidation(requiredFields) : "";
     if(requiredVal.length > 0){
         html += '<li>Please fill ';
         for(let field in requiredVal){
@@ -128,6 +136,13 @@ const generateValidationHthml = function(){
         html += '<li>Please enter valid phone number.</li>';
     }
     return html;
+}
+
+// Clear values in input fields
+const clearValues = function(list){
+    for (let item in list){
+        document.getElementById(list[item]).value = "";
+    }
 }
 
 
@@ -171,8 +186,8 @@ const generateTeamHTML = function(member){
                     ${member.bio}
                 </p>
                 <div class="sms">
-                    <a href="twitter">Twitter</a>
-                    <a href="insta">Instagram</a>
+                    <a href="https://twitter.com/JRFURugby" alt="Japan Rugby Twitter Account" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="insta"><i class="fa-brands fa-square-instagram"></i></a>
                 </div>
             </article>
             </section>
@@ -183,15 +198,15 @@ const generateTeamHTML = function(member){
                     <figcaption class="${member.id}_news"><a href="${member.news1}">${member.news1Title}</a></figcaption>
                 </figure>
                 <figure>
-                    <img src="./img/news/news2.png" alt="${member.news2Title}_news2">
+                    <img src="./img/news/news2.jpg" alt="${member.news2Title}_news2">
                     <figcaption class="${member.id}_news"><a href="${member.news2}">${member.news2Title}</a></figcaption>
                 </figure>
                 <figure>
-                    <img src="./img/news/news3.png" alt="${member.news3Title}_news3">
+                    <img src="./img/news/news3.jpg" alt="${member.news3Title}_news3">
                     <figcaption class="${member.id}_news"><a href="${member.news3}">${member.news3Title}</a></figcaption>
                 </figure>
                 <figure>
-                    <img src="./img/news/news4.png" alt="${member.news4Title}_news4">
+                    <img src="./img/news/news4.jpg" alt="${member.news4Title}_news4">
                     <figcaption class="${member.id}_news"><a href="${member.news4}">${member.news4Title}</a></figcaption>
                 </figure>
             </figure>
@@ -342,12 +357,32 @@ submitContact.addEventListener('click', function(e){
     while (alertList.hasChildNodes()) {
         alertList.removeChild(alertList.firstChild);
     }
-    let html = generateValidationHthml();
+    let html = generateValidationHthml(email, phone, requiredFields);
     if (html.length > 0){
         showElement(alertContainer);
         alertList.insertAdjacentHTML("afterbegin", html);
     }else if(html.length == 0){
         hideElement([alertContainer]);
-        console.log('ok');
+        clearValues(clearFields);
+        fileInput.value = null;
+        alert("Thank you for submitting the form. We will be in touch with you soon.");
+        console.log(`Form submitted. Values`);
+    }
+});
+
+submitSubscribe.addEventListener('click', function(e){
+    e.preventDefault();
+    while (subAlertList.hasChildNodes()) {
+        subAlertList.removeChild(subAlertList.firstChild);
+    }
+    let html = generateValidationHthml(subEmail, null, ['submail']);
+    if (html.length > 0){
+        showElement(subAlertContainer);
+        subAlertList.insertAdjacentHTML("afterbegin", html);
+    }else if(html.length == 0){
+        hideElement([subAlertContainer]);
+        clearValues(['submail']);
+        alert("Thank you for subscribing to Brave Blossom.");
+        console.log(`Form submitted. Values`);
     }
 });

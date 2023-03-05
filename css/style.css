@@ -323,6 +323,19 @@ section#team-details article .sms{
     margin: 20px auto;
 }
 
+.fa-brands{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color:#252525;
+}
+
+section#team-details article .sms i:hover{
+    cursor: pointer;
+    color:rgb(240, 113, 121);
+}
+
 section#team-details figure#news figure{
     width: 30%;
 }
@@ -610,4 +623,9 @@ footer section#footer{
 
 #footer-nav li{
     padding: 4px;
+}
+
+#footer-nav li:hover{
+    cursor: pointer;
+    color:#fff;
 }
